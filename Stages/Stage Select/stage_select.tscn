@@ -1,0 +1,238 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Stages/Stage Select/levelrect.png" type="Texture" id=1]
+[ext_resource path="res://Stages/Stage Select/dagirlfriendicon.png" type="Texture" id=2]
+[ext_resource path="res://Stages/Stage Select/bossicon.png" type="Texture" id=3]
+[ext_resource path="res://Stages/Stage Select/dababymapicon.png" type="Texture" id=4]
+[ext_resource path="res://Stages/Stage Select/stage_select.gd" type="Script" id=5]
+[ext_resource path="res://DaFont.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Stages/Stage Select/lock.png" type="Texture" id=7]
+[ext_resource path="res://Stages/Rap Battle/ground.png" type="Texture" id=8]
+[ext_resource path="res://Stages/Stage Select/citymapicon.png" type="Texture" id=9]
+[ext_resource path="res://Stages/Tutorial/clouds2.png" type="Texture" id=10]
+[ext_resource path="res://Stages/Stage Select/damothericon.png" type="Texture" id=11]
+[ext_resource path="res://La Musica/Just a completely normal Friday Night Funkin' level....mp3" type="AudioStream" id=12]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 30, 0, 30, 30 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 3.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "fadein"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "fadeout"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="bg" type="ColorRect" parent="."]
+margin_left = -56.0
+margin_top = -74.0
+margin_right = 348.0
+margin_bottom = 282.0
+color = Color( 0.156863, 0.164706, 0.25098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clouds2" type="Sprite" parent="bg"]
+position = Vector2( 124.5, 115.25 )
+scale = Vector2( 0.783333, 0.783333 )
+texture = ExtResource( 10 )
+
+[node name="ground" type="Sprite" parent="."]
+position = Vector2( 27.5, 106.5 )
+scale = Vector2( 1.17188, 1.16667 )
+texture = ExtResource( 8 )
+
+[node name="ground2" type="Sprite" parent="."]
+position = Vector2( 102.5, 106.5 )
+scale = Vector2( 1.17188, 1.16667 )
+texture = ExtResource( 8 )
+
+[node name="citymapicon" type="Sprite" parent="."]
+modulate = Color( 0.980392, 1, 1, 1 )
+position = Vector2( 103, 55 )
+scale = Vector2( 1.17188, 1.16667 )
+texture = ExtResource( 9 )
+
+[node name="Path" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="ColorRect" type="ColorRect" parent="Path"]
+margin_left = 39.0
+margin_top = 103.0
+margin_right = 155.0
+margin_bottom = 104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="Path"]
+margin_left = 154.0
+margin_top = 27.0
+margin_right = 284.0
+margin_bottom = 28.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Path"]
+margin_left = 154.0
+margin_top = 28.0
+margin_right = 155.0
+margin_bottom = 103.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icons" type="YSort" parent="."]
+sort_enabled = false
+
+[node name="Tutorial" type="Sprite" parent="Icons"]
+position = Vector2( 29, 103 )
+scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="Icons/Tutorial"]
+visible = false
+position = Vector2( 9.04762, 22.381 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[node name="Stage1" type="Sprite" parent="Icons"]
+position = Vector2( 96, 103 )
+scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="Icons/Stage1"]
+visible = false
+position = Vector2( -21.9048, 20.9524 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="Stage2" type="Sprite" parent="Icons"]
+position = Vector2( 190, 28 )
+scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="Icons/Stage2"]
+visible = false
+position = Vector2( -68.0952, 55.7143 )
+scale = Vector2( 0.822421, 0.822421 )
+texture = ExtResource( 11 )
+
+[node name="Stage3" type="Sprite" parent="Icons"]
+position = Vector2( 285, 26 )
+scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 29, 103 )
+frames = SubResource( 3 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stage" type="Label" parent="Control"]
+margin_left = 74.0
+margin_top = 132.0
+margin_right = 245.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 4 )
+text = "PLACEHOLDER"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="boss" type="Label" parent="Control/stage"]
+anchor_right = 0.007
+margin_top = 17.0
+margin_right = 169.803
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 5 )
+text = "SUS"
+align = 1
+
+[node name="stage1lock" type="Sprite" parent="."]
+position = Vector2( 96, 101 )
+texture = ExtResource( 7 )
+
+[node name="stage2lock" type="Sprite" parent="."]
+position = Vector2( 190, 26 )
+texture = ExtResource( 7 )
+
+[node name="stage3lock" type="Sprite" parent="."]
+position = Vector2( 285, 25 )
+texture = ExtResource( 7 )
+
+[node name="fade" type="ColorRect" parent="."]
+margin_left = -47.0
+margin_top = -27.0
+margin_right = 376.0
+margin_bottom = 187.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fade"]
+autoplay = "fadein"
+anims/fadein = SubResource( 6 )
+anims/fadeout = SubResource( 7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true

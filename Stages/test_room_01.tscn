@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Characters/Dababy/dababyplayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/EnemyBasic/basicenemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Characters/EnemyBomb/enemybomb.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/EnemyBomb/bomb.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 339.812, 14.711 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 162.628, 167.395 )
+shape = SubResource( 1 )
+
+[node name="BasicEnemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 249.468, 137.844 )
+
+[node name="EnemyBomb" parent="." instance=ExtResource( 3 )]
+position = Vector2( 17.3725, 134.526 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 119.005, 140.278 )
+
+[node name="dababy" parent="." instance=ExtResource( 1 )]

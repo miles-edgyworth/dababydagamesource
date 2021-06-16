@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Stages/Stage 2/planebullet.png" type="Texture" id=1]
+[ext_resource path="res://Characters/Hitboxes/Hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Stages/Stage 2/planebullet.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 2 )
+
+[sub_resource type="Animation" id=2]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 2 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "myballshurt"
+} ]
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/die = SubResource( 2 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="Hitbox"]

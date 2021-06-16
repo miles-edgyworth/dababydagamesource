@@ -1,0 +1,347 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Stages/Stage 2/clouds5.png" type="Texture" id=1]
+[ext_resource path="res://Stages/Stage 2/clouds6.png" type="Texture" id=2]
+[ext_resource path="res://Stages/Stage 2/clouds3.png" type="Texture" id=3]
+[ext_resource path="res://Stages/Stage 2/clouds4.png" type="Texture" id=4]
+[ext_resource path="res://Characters/DaPlane/daplane.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Icons/download.jpg" type="Texture" id=6]
+[ext_resource path="res://DaFont.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Stages/Stage 2/download.gd" type="Script" id=8]
+[ext_resource path="res://Characters/Hitboxes/Hurtbox.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 172, 116 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "hurt"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 560, 125.013 ), Vector2( 570, 125.013 ), Vector2( 550, 125.013 ), Vector2( 560, 125.013 ) ]
+}
+
+[sub_resource type="TileSet" id=3]
+0/name = "clouds3.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 50, 30 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "clouds4.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 50, 30 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "clouds5.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 50, 30 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "clouds6.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 50, 30 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 2413, 718 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 3037, 3739 )
+
+[sub_resource type="Animation" id=6]
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 60 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 64
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=8]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 312, -75 ), Vector2( 310, -70 ), Vector2( 317, -80 ), Vector2( 310, -70 ), Vector2( 305, -70 ), Vector2( 300, -90 ), Vector2( 320, -90 ), Vector2( 320, -100 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -4652.0
+margin_top = -2148.0
+margin_right = 5382.0
+margin_bottom = 3204.0
+color = Color( 0.450439, 0.538862, 0.5625, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="download" type="Sprite" parent="."]
+position = Vector2( 560, 125.013 )
+scale = Vector2( 1.51111, 1.02667 )
+texture = ExtResource( 6 )
+script = ExtResource( 8 )
+
+[node name="Hurtbox" parent="download" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( -372.412, -121.766 )
+scale = Vector2( 0.661765, 0.974026 )
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="download/Hurtbox" index="0"]
+position = Vector2( 564, 124 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="download"]
+anims/hurt = SubResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 30, 30 )
+format = 1
+tile_data = PoolIntArray( -1638318, 0, 0, -1572847, 2, 0, -1572767, 3, 0, -1507308, 0, 0, -1441766, 3, 0, -1310746, 0, 0, -1376191, 0, 0, -1376183, 3, 0, -1245192, 0, 0, -1245187, 0, 0, -1310712, 0, 0, -1310699, 0, 0, -1310636, 0, 0, -1310631, 0, 0, -1245183, 0, 0, -1245144, 0, 0, -1245139, 0, 0, -1245126, 0, 0, -1245121, 0, 0, -1245091, 0, 0, -1114134, 1, 0, -1179618, 0, 0, -1179581, 0, 0, -1048593, 3, 0, -1114089, 0, 0, -983068, 0, 0, -983061, 3, 0, -983053, 2, 0, -983042, 3, 0, -1048542, 0, 0, -1048486, 3, 0, -1048479, 1, 0, -917513, 1, 0, -917511, 0, 0, -983030, 3, 0, -982994, 3, 0, -982987, 1, 0, -982976, 3, 0, -982969, 1, 0, -982957, 1, 0, -982955, 0, 0, -851997, 0, 0, -851981, 3, 0, -917498, 3, 0, -917484, 3, 0, -917477, 1, 0, -917465, 1, 0, -917463, 0, 0, -917413, 0, 0, -786404, 3, 0, -786342, 0, 0, -720811, 2, 0, -589840, 1, 0, -655272, 0, 0, -589809, 2, 0, -589762, 0, 0, -589730, 3, 0, -524277, 1, 0, -524270, 0, 0, -524220, 3, 0, -524208, 2, 0, -458679, 0, 0, -458675, 1, 0, -458663, 0, 0, -458655, 3, 0, -393183, 1, 0, -393171, 0, 0, -262163, 0, 0, -262154, 0, 0, -262149, 0, 0, -327587, 0, 0, -196634, 0, 0, -262102, 0, 0, -262095, 0, 0, -262090, 0, 0, -262079, 0, 0, -131087, 0, 0, -131074, 0, 0, -196550, 0, 0, -196529, 3, 0, -131000, 1, 0, -130981, 3, 0, -29, 3, 0, -22, 1, 0, -65456, 0, 0, -65449, 3, 0, -65441, 2, 0, 65519, 3, 0, 44, 2, 0, 62, 1, 0, 131044, 0, 0, 131051, 3, 0, 65603, 3, 0, 65631, 3, 0, 196605, 1, 0, 196607, 0, 0, 131146, 2, 0, 196613, 0, 0, 196697, 2, 0, 262182, 2, 0, 262239, 2, 0, 393174, 2, 0, 327684, 0, 0, 327712, 3, 0, 327724, 2, 0, 327730, 2, 0, 327772, 1, 0, 458713, 0, 0, 458725, 2, 0, 458738, 0, 0, 393257, 1, 0, 393269, 0, 0, 524255, 3, 0, 524267, 2, 0, 458754, 0, 0, 458787, 3, 0, 524356, 1, 0, 655322, 0, 0, 655330, 3, 0, 589878, 0, 0, 589886, 3, 0, 720948, 0, 0, 851932, 0, 0, 786433, 0, 0, 786488, 0, 0, 851973, 0, 0, 852035, 0, 0, 917583, 3, 0, 917590, 1, 0, 983093, 3, 0, 983112, 1, 0, 983114, 0, 0, 983131, 3, 0, 1114066, 1, 0, 1114068, 0, 0, 1114085, 3, 0, 1048585, 1, 0, 1048597, 1, 0, 1048599, 0, 0, 1048641, 3, 0, 1048656, 0, 0, 1048663, 3, 0, 1048671, 2, 0, 1179610, 0, 0, 1179617, 3, 0, 1179625, 2, 0, 1114141, 0, 0, 1114148, 3, 0, 1114166, 0, 0, 1114173, 3, 0, 1114181, 2, 0, 1179727, 0, 0, 1179743, 3, 0, 1245228, 3, 0, 1245258, 2, 0, 1376212, 2, 0, 1376241, 0, 0, 1310738, 3, 0, 1310768, 2, 0, 1310809, 2, 0, 1441763, 2, 0, 1441789, 2, 0, 1376282, 0, 0, 1376294, 2, 0, 1376307, 0, 0, 1376319, 2, 0, 1376339, 3, 0, 1376351, 2, 0, 1441792, 0, 0, 1441824, 3, 0, 1441836, 2, 0, 1441861, 2, 0, 1441884, 1, 0, 1507334, 3, 0, 1507346, 2, 0, 1507369, 1, 0, 1507394, 1, 0, 1507406, 0, 0, 1507414, 3, 0, 1572879, 1, 0, 1572891, 0, 0, 1572899, 3, 0, 1572916, 0, 0, 1638401, 0, 0, 1638409, 3, 0, 1769443, 0, 0, 1834990, 0, 0, 1835063, 0, 0, 1966048, 3, 0, 1966055, 1, 0, 1900571, 0, 0, 2031596, 3, 0, 1966121, 3, 0, 2097121, 0, 0, 2097128, 3, 0, 2097136, 2, 0, 2031647, 0, 0, 2031669, 3, 0, 2228234, 1, 0, 2228236, 0, 0, 2359274, 2, 0, 2424804, 3, 0, 2424822, 2, 0, 2359347, 2, 0, 2490349, 1, 0, 2490361, 0, 0, 2424849, 0, 0, 2424877, 3, 0, 2424889, 2, 0, 2555879, 3, 0, 2555912, 1, 0, 2555944, 0, 0, 2555952, 3, 0, 2687006, 1, 0, 2818026, 0, 0, 2818035, 0, 0, 2818040, 0, 0, 2752528, 0, 0, 2752536, 3, 0, 2818083, 0, 0, 2818088, 0, 0, 2818099, 0, 0, 2883591, 0, 0, 2883593, 0, 0, 2883598, 0, 0, 2883609, 0, 0, 2883628, 0, 0, 2949175, 0, 0, 3080160, 3, 0, 3080167, 1, 0, 3145708, 3, 0, 3145714, 1, 0, 3145716, 0, 0, 3080233, 3, 0, 3080240, 1, 0, 3145762, 1, 0, 3145764, 0, 0, 3145781, 3, 0, 3211321, 2, 0, 3276816, 0, 0, 3276823, 3, 0, 3276831, 2, 0, 3473447, 0, 0, 3473459, 2, 0, 3538957, 0, 0, 3539001, 2, 0, 3604534, 1, 0 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 230, 116 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -4, 1724 )
+collision_layer = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 496, -32 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -3834, -1356 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 476, -2626 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 5974, -373 )
+collision_layer = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -48, 0 )
+shape = SubResource( 5 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
+autoplay = "Ny Anim"
+"anims/Ny Anim" = SubResource( 6 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Label" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 312.0
+margin_top = -75.0
+margin_right = 816.0
+margin_bottom = 324.0
+custom_fonts/font = SubResource( 7 )
+text = "KILL DABABY
+
+
+
+
+DO IT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="YSort/Label"]
+autoplay = "shake"
+anims/shake = SubResource( 8 )
+
+[node name="Label3" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 507.0
+margin_top = 348.0
+margin_right = 1011.0
+margin_bottom = 747.0
+custom_fonts/font = SubResource( 7 )
+text = "
+DO IT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 677.0
+margin_top = -408.0
+margin_right = 1181.0
+margin_bottom = -9.0
+rect_pivot_offset = Vector2( 229, 308 )
+custom_fonts/font = SubResource( 7 )
+text = "
+
+
+
+DO IT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 153.0
+margin_top = 552.0
+margin_right = 657.0
+margin_bottom = 951.0
+rect_pivot_offset = Vector2( 252, 54 )
+custom_fonts/font = SubResource( 7 )
+text = "COWARD"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = -130.0
+margin_top = -135.0
+margin_right = 374.0
+margin_bottom = 264.0
+rect_pivot_offset = Vector2( 252, 54 )
+custom_fonts/font = SubResource( 7 )
+text = "COWARD"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 609.0
+margin_top = 60.0
+margin_right = 1113.0
+margin_bottom = 459.0
+rect_pivot_offset = Vector2( 229, 308 )
+custom_fonts/font = SubResource( 7 )
+text = "
+DO IT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = -79.0
+margin_top = 267.0
+margin_right = 425.0
+margin_bottom = 666.0
+rect_pivot_offset = Vector2( 229, 308 )
+custom_fonts/font = SubResource( 7 )
+text = "IDIOT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = 242.0
+margin_top = -191.0
+margin_right = 746.0
+margin_bottom = 208.0
+rect_pivot_offset = Vector2( 229, 308 )
+custom_fonts/font = SubResource( 7 )
+text = "IDIOT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="YSort"]
+self_modulate = Color( 0.564706, 0, 0, 1 )
+margin_left = -1852.0
+margin_top = 409.0
+margin_right = -1348.0
+margin_bottom = 808.0
+rect_pivot_offset = Vector2( 229, 308 )
+custom_fonts/font = SubResource( 7 )
+text = "NUMBER 6: MAN
+URINATES ON
+FELLOW PASSENGER
+FOR NOT BEING ALLOWED
+TO SMOKE!!1!1!!11!11!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="area_entered" from="download/Hurtbox" to="download" method="_on_Hurtbox_area_entered"]
+
+[editable path="download/Hurtbox"]

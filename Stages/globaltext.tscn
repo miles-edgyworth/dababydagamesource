@@ -1,0 +1,334 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://DaFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Stages/Rap Battle/dababyportraits.png" type="Texture" id=2]
+[ext_resource path="res://Stages/Rap Battle/textrect.png" type="Texture" id=3]
+[ext_resource path="res://Stages/Rap Battle/indicator.png" type="Texture" id=4]
+[ext_resource path="res://Stages/globaltext.gd" type="Script" id=5]
+[ext_resource path="res://Stages/Rap Battle/enter.png" type="Texture" id=6]
+[ext_resource path="res://Stages/Tutorial/dagirlfriendportraits.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 235, 90 ), Vector2( 237.73, 90 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Aggressive"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, -25 ), Vector2( 29, -25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Confused"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, -25 ), Vector2( 29, -25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Neutral"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, -25 ), Vector2( 29, -25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Aggressive"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 230, -25 ), Vector2( 221, -25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Confused"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 230, -25 ), Vector2( 221, -25 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Neutral"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 230, -25 ), Vector2( 221, -25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -135, -49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextBox" type="TextureRect" parent="."]
+margin_left = 33.0
+margin_top = 59.0
+margin_right = 280.0
+margin_bottom = 171.0
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextBox"]
+margin_left = 7.0
+margin_top = 15.0
+margin_right = 243.0
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="TextBox"]
+
+[node name="Sprite" type="Sprite" parent="TextBox"]
+position = Vector2( 237.231, 90 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextBox/Sprite"]
+autoplay = "Move"
+anims/Move = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="TextBox"]
+position = Vector2( 205, 90 )
+scale = Vector2( 0.466667, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="Speaker1" type="Sprite" parent="TextBox"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 20, -25 )
+scale = Vector2( 1.65, 1.65 )
+texture = ExtResource( 2 )
+hframes = 4
+
+[node name="Speaker1Anim" type="AnimationPlayer" parent="TextBox/Speaker1"]
+anims/Aggressive = SubResource( 3 )
+anims/Confused = SubResource( 4 )
+anims/Neutral = SubResource( 5 )
+
+[node name="Speaker2" type="Sprite" parent="TextBox"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 230, -25 )
+scale = Vector2( 1.65, 1.65 )
+texture = ExtResource( 7 )
+hframes = 3
+frame = 2
+
+[node name="Speaker2Anim" type="AnimationPlayer" parent="TextBox/Speaker2"]
+anims/Aggressive = SubResource( 6 )
+anims/Confused = SubResource( 7 )
+anims/Neutral = SubResource( 8 )
