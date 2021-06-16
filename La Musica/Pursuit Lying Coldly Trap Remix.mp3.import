@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pursuit Lying Coldly Trap Remix.mp3-e8e29da0302be5f1ca5154d03578b5cc.mp3str"
+
+[deps]
+
+source_file="res://La Musica/Pursuit Lying Coldly Trap Remix.mp3"
+dest_files=[ "res://.import/Pursuit Lying Coldly Trap Remix.mp3-e8e29da0302be5f1ca5154d03578b5cc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

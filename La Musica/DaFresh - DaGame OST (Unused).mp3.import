@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DaFresh - DaGame OST (Unused).mp3-3639cd8af69525b177d1830c850e1313.mp3str"
+
+[deps]
+
+source_file="res://La Musica/DaFresh - DaGame OST (Unused).mp3"
+dest_files=[ "res://.import/DaFresh - DaGame OST (Unused).mp3-3639cd8af69525b177d1830c850e1313.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

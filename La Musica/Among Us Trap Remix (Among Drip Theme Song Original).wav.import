@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Among Us Trap Remix (Among Drip Theme Song Original).wav-9cc3fd065beed48c1bfcd90dbf93d115.sample"
+
+[deps]
+
+source_file="res://La Musica/Among Us Trap Remix (Among Drip Theme Song Original).wav"
+dest_files=[ "res://.import/Among Us Trap Remix (Among Drip Theme Song Original).wav-9cc3fd065beed48c1bfcd90dbf93d115.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

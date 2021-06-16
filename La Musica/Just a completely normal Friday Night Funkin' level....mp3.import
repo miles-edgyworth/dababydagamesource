@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Just a completely normal Friday Night Funkin' level....mp3-c0a2b625f4d04b08c5db27e36dbbc248.mp3str"
+
+[deps]
+
+source_file="res://La Musica/Just a completely normal Friday Night Funkin' level....mp3"
+dest_files=[ "res://.import/Just a completely normal Friday Night Funkin' level....mp3-c0a2b625f4d04b08c5db27e36dbbc248.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gestation - Cave Story+ Ridiculon.mp3-a1d4d08acc2a3aa03a68de5f6e252781.mp3str"
+
+[deps]
+
+source_file="res://La Musica/Gestation - Cave Story+ Ridiculon.mp3"
+dest_files=[ "res://.import/Gestation - Cave Story+ Ridiculon.mp3-a1d4d08acc2a3aa03a68de5f6e252781.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

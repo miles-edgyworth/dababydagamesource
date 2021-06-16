@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Meme fart sound effect.mp3-2293a2b63a4016d6dc5e648f91328393.mp3str"
+
+[deps]
+
+source_file="res://La Musica/Meme fart sound effect.mp3"
+dest_files=[ "res://.import/Meme fart sound effect.mp3-2293a2b63a4016d6dc5e648f91328393.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
