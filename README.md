@@ -1,9 +1,9 @@
-# DaGame
+# DaSource
 Source code and files for DaGame: A DaBaby Game.
 
 Play DaGame on itch.io: https://miles-edgyworth.itch.io/dagame-a-dababy-game
 
-# !!If you want to compile this game yourself, continue reading.!!
+# --If you want to compile this game yourself, continue reading--
 
 Download this repository (Click on code and Download ZIP) and unzip.
 
